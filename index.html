@@ -248,6 +248,116 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/17/常用的几种规范浅谈/" itemprop="url">
+                  常用的几种规范浅谈
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-17T21:48:14+08:00" content="2016-10-17">
+              2016-10-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/17/常用的几种规范浅谈/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/17/常用的几种规范浅谈/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="浅谈常用的几种规范"><a href="#浅谈常用的几种规范" class="headerlink" title="浅谈常用的几种规范"></a>浅谈常用的几种规范</h1><h2 id="CommonJS规范。"><a href="#CommonJS规范。" class="headerlink" title="CommonJS规范。"></a>CommonJS规范。</h2><h3 id="160-160-160-160-最近总是感觉对着几种规范似懂非懂的，很多朋友也对于这些规范很是不明白，今天我通过查阅资料，发现了也许这些解释，目前对于我们来说，更容易接受，好东西当然是大家一起分享的。废话不说了，下面直接进入正文。"><a href="#160-160-160-160-最近总是感觉对着几种规范似懂非懂的，很多朋友也对于这些规范很是不明白，今天我通过查阅资料，发现了也许这些解释，目前对于我们来说，更容易接受，好东西当然是大家一起分享的。废话不说了，下面直接进入正文。" class="headerlink" title="&#160;&#160;&#160;&#160;最近总是感觉对着几种规范似懂非懂的，很多朋友也对于这些规范很是不明白，今天我通过查阅资料，发现了也许这些解释，目前对于我们来说，更容易接受，好东西当然是大家一起分享的。废话不说了，下面直接进入正文。"></a>&#160;&#160;&#160;&#160;最近总是感觉对着几种规范似懂非懂的，很多朋友也对于这些规范很是不明白，今天我通过查阅资料，发现了也许这些解释，目前对于我们来说，更容易接受，好东西当然是大家一起分享的。废话不说了，下面直接进入正文。</h3><h2 id="CommonJS包含三个内容"><a href="#CommonJS包含三个内容" class="headerlink" title="CommonJS包含三个内容"></a>CommonJS包含三个内容</h2><p>&lt;– more –&gt;</p>
+<ol>
+<li>模块引用<br> 在commonJS中存在一个方法require（），通过这个方法可以引入相应模板中的方法，到对应的模板中。代码奉上：<br> var math = require(‘math’);  </li>
+<li><p>模块的定义<br>模块的定义就是在操作的时候，每个变量具体发挥的作用，个人观点，当你了解每个变量的具体作用的时候才可以更加灵活的运用。那么问题来了，exports就是为了暴露一个模块中的方法或者是变量而存在的，（不要问我暴露是什么意思，ps:暴露出来后，再别的模板中才可以使用require（）进行引用，再问自杀！！！！！），module它是代表模块自身，exports是module的属性。代码奉上：<br>`// math.js<br> exports.add = function () {<br> var sum = 0,<br>  i = 0,<br>  args = arguments,<br>  l = args.length;<br>  while (i &lt; l) {<br>  sum += args[i++];<br>  }<br>  return sum;<br>  };<br> 在另一个文件中，我们通过require()方法引入模块后，就能调用定义的属性或方法了：<br> // program.js<br> var math = require(‘math’);<br> exports.increment = function (val) {<br> return math.add(val, 1);</p>
+<p> };`  </p>
+</li>
+</ol>
+<ol>
+<li>模块标识<br>模块标识简单点说就是对于require（）参数的一种规范，《深入浅出node.js》一文中是这样说的,”它必须是符合小驼峰命名的字符串，或者已.或者..开头的相对路径，或者是绝对路径”，我比较喜欢的一点就是，它规定参数的尾部可以不带文件后缀名.js   </li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/28/Sass常用基础使用语法/" itemprop="url">
                   Sass常用基础使用语法
                 </a>
@@ -579,7 +689,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
